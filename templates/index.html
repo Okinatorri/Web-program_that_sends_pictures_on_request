@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Search</h1>
+
+        <form method="POST" id="searchForm">
+            <input type="text" name="search_query" required>
+            <input type="submit" value="Search">
+        </form>
+
+        {% if image_url %}
+            <div id="imageContainer">
+                <img src="{{ image_url }}" alt="Image" id="resultImage">
+            </div>
+            <br>
+            <form action="/" method="POST">
+                <input type="hidden" name="search_query" value="{{ search_query }}">
+                <input type="submit" value="Change">
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
