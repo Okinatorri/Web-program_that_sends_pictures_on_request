@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 app.secret_key = 'secret_key'
-UNSPLASH_ACCESS_KEY = '9wTGZX8KvvSouSWHrxNjvrJp0KwClzHiQsCHlGxYSxo'
+UNSPLASH_ACCESS_KEY = 'key'
 
 # Добавим переменные, которые будут хранить текущее изображение и последний поисковой запрос
 current_image = None
